@@ -1,0 +1,76 @@
+<div class="admin-flight-list_main_div" style="padding: 30px;">
+  <br>
+  <br>
+  <h3>Flights
+  </h3>
+  <br>
+  <br>
+
+  <table class="table table-striped">
+
+    <thead>
+    <tr class="table-dark">
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        <span [ngClass]="{'font-color-yellow': listOrderFilter.order === LIST_ORDER_FLIGHT_NR}"
+              class="airport-header"
+              (click)="changeListOrder(1)"
+        >
+          Flight nr.
+        </span>
+        <br><input id="fnrFilter" (keyup)="onKeyFlightNrFilter($event)" type="text" class="airport-filter form-control">
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        <span [ngClass]="{'font-color-yellow': listOrderFilter.order === LIST_ORDER_DEP_AIRPORT}"
+              class="airport-header"
+              (click)="changeListOrder(2)"
+        >
+          Departure airport
+        </span>
+        <br><input id="depFilter" (keyup)="onKeyDepAirportFilter($event)" type="text" class="airport-filter form-control">
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        <span [ngClass]="{'font-color-yellow': listOrderFilter.order === LIST_ORDER_ARR_AIRPORT}"
+              class="airport-header"
+              (click)="changeListOrder(3)"
+        >
+          Arrival airport
+        </span>
+        <br><input id="arrFilter" (keyup)="onKeyArrAirportFilter($event)" type="text" class="airport-filter form-control">
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Departure
+<!--        <br><input id="stdFilter" type="date" class="airport-filter form-control" style="width: 140px;">-->
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Arrival
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Plane
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+      </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let flight of flights, let i = index">
+      <td style="vertical-align: middle;">{{flight.flightNumber}}</td>
+      <td style="vertical-align: middle;">{{flight.depName}}, {{flight.depCity}} ({{flight.depIata}})</td>
+      <td style="vertical-align: middle;">{{flight.arrName}}, {{flight.arrCity}} ({{flight.arrIata}})</td>
+      <td style="vertical-align: middle;">{{flight.stDeparture | date:'yyyy.MM.dd HH:mm'}}</td>
+      <td style="vertical-align: middle;">{{flight.stArrival | date:'yyyy.MM.dd HH:mm'}}</td>
+      <td style="vertical-align: middle;">{{flight.planeRegistrationNr}}</td>
+      <td style="vertical-align: middle;">
+        <button type="button" (click)="goToReservations(i)" class="btn btn-info btn-sm" title="Reservations"> Reservations </button>
+      </td>
+    </tr>
+    </tbody>
+
+
+  </table>
+
+  <button (click)="pagePrior()" type="button" class="btn btn-info" title="Pprevious page"> &nbsp; &lt;&lt; &nbsp; </button>
+  &nbsp;&nbsp;
+  <button (click)="pageNext()" type="button" class="btn btn-info" title="Next page"> &nbsp; &gt;&gt; &nbsp; </button>
+
+</div>

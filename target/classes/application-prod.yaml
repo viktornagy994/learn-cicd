@@ -1,0 +1,15 @@
+frontend.url: https://kingfishair.progmasters.hu
+backend.url: https://kingfishair.progmasters.hu
+
+cors-policies: https://kingfishair.progmasters.hu, http://16.171.211.88, http://kingfishair.progmasters.hu
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/kingfishairdb?serverTimezone=UTC&characterEncoding=utf8
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            redirect-uri: "https://kingfishair.progmasters.hu/api/login/oauth2/code/{registrationId}"
+          facebook:
+            redirect-uri: "https://kingfishair.progmasters.hu/api/login/oauth2/code/{registrationId}"

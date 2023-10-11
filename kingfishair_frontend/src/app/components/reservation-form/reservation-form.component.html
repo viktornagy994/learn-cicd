@@ -1,0 +1,43 @@
+<body class="reservation-form">
+<form class="form-wrapper" [formGroup]="reservationForm">
+  <p class="upper-text">
+    Please add your reservation below. Once you are happy with the data, please click submit.
+  </p>
+  <ul class="contacts-list">
+    <ol class="contacts-list-item">
+      <app-reservations
+        *ngFor="let childForm of reservationsArray.controls; let i = index"
+        [childForm]="childForm"
+        [arrayIndex]="i"
+        [totalReservations]="reservationsArray.length"
+        (deleteReservationEvent)="deleteReservation($event)">
+      </app-reservations>
+    </ol>
+  </ul>
+
+  <button class="add-button" [disabled]="!reservationsArray.valid" (click)="addReservationItem()"
+          *ngIf="reservationsArray.length < 12; else maxReservationsElse">
+    <i class="fa-solid fa-plus"></i></button>
+
+  <ng-template #maxReservationsElse>
+    <span>
+      12 is the maximum number of seats allowed!
+    </span>
+  </ng-template>
+
+  <div class="choose-button">
+    <button mat-raised-button color="primary" (click)="chooseSeat()"
+            [disabled]="!reservationForm.valid"
+    >Choose your seat
+    </button>
+  </div>
+
+  <div class="submit-button">
+    <button mat-raised-button color="primary" (click)="submitReservationForm()"
+            [disabled]="!(reservationForm.valid && isChosen)"
+    >Submit
+    </button>
+  </div>
+
+</form>
+</body>

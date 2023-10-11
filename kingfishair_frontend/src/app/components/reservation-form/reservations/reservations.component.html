@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+<form [formGroup]="childForm" class="reservation-form">
+  <h4>
+     Passenger {{arrayIndex + 1}}:
+  </h4>
+
+  <mat-form-field>
+    <mat-label [ngClass]="{'text-danger': (childForm.get('name')?.invalid && childForm.get('name')?.touched)
+    ||(childForm.get('name')?.errors?.['serverError'])}">Name</mat-label>
+    <input matInput formControlName="name" [ngClass]="{'is-invalid': (childForm.get('name')?.invalid && childForm.get('name')?.touched)
+    ||(childForm.get('name')?.errors?.['serverError'])}">
+    <small *ngIf="childForm.get('name')?.invalid &&childForm.get('name')?.touched
+&& !childForm.get('name')?.errors?.['serverError']">
+      Please enter your name!(It must contain at least 6 letter)
+    </small>
+    <small
+      *ngIf="childForm.get('name')?.errors?.serverError"class="text-danger">
+      {{childForm.get('name')?.errors?.['serverError']}}
+    </small>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label [ngClass]="{'text-danger': (childForm.get('identificationNumber')?.invalid && childForm.get('identificationNumber')?.touched)
+    ||(childForm.get('identificationNumber')?.errors?.['serverError'])}">Identification number</mat-label>
+    <input matInput formControlName="identificationNumber"[ngClass]="{'is-invalid': (childForm.get('identificationNumber')?.invalid && childForm.get('identificationNumber')?.touched)
+    ||(childForm.get('identificationNumber')?.errors?.['serverError'])}">
+    <small *ngIf="childForm.get('identificationNumber')?.invalid &&childForm.get('identificationNumber')?.touched
+&& !childForm.get('identificationNumber')?.errors?.['serverError']">
+      Please enter a vaild ID number!(Between 5-20 character, only letters & numbers)
+    </small>
+    <small
+      *ngIf="childForm.get('identificationNumber')?.errors?.['serverError']">
+      {{childForm.get('identificationNumber')?.errors?.['serverError']}}
+    </small>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label [ngClass]="{'text-danger': (childForm.get('gender')?.invalid && childForm.get('gender')?.touched)
+    || (childForm.get('gender')?.errors?.['serverError'])}">Gender</mat-label>
+    <mat-select formControlName="gender" [ngClass]="{'is-invalid': (childForm.get('gender')?.invalid && childForm.get('gender')?.touched)
+    || (childForm.get('gender')?.errors?.['serverError'])}">
+      <mat-option *ngFor="let gender of genderOptions" [value]="gender.name">{{ gender.gender }}</mat-option>
+    </mat-select>
+    <small *ngIf="childForm.get('gender')?.invalid && childForm.get('gender')?.touched
+    && !childForm.get('gender')?.errors?.['serverError']">
+      Please choose a gender!
+    </small>
+    <small
+      *ngIf="childForm.get('gender')?.errors?.['serverError']">
+      {{ childForm.get('gender')?.errors?.['serverError'] }}
+    </small>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Select your Extras:</mat-label>
+    <mat-select formControlName="extraAddons" multiple>
+      <mat-option *ngFor="let extraAddon of extraAddonOptions" [value]="extraAddon.name">{{ extraAddon.displayName + ' '+ extraAddon.price+'€'}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button class = "delete-button" (click)="deleteReservation(arrayIndex)" *ngIf="totalReservations > 1">
+    <i class="fa-solid fa-trash-can"></i></button>
+</form>
+<hr>

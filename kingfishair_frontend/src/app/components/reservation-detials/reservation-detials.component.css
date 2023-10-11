@@ -1,0 +1,48 @@
+.card {
+  width: 18rem;
+  border-width: 0;
+}
+
+.card-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: rgba(75, 134, 118, 0.7);
+}
+.title{
+  text-align: center;
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+.button-container button{
+  padding: 0.7rem 3rem;
+  font-size: 1rem;
+  border: darkslategray;
+  border-radius: 0.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(75, 134, 118, 0.75);
+}
+
+.accept {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 0.6rem;
+  text-align: center;
+  margin: 0.4rem;
+}
+
+#pay-later-button {
+  background-color: #E78282FF;
+}
+
+.finish-transaction{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  border: darkslategray !important;
+  border-radius: 0.5rem;
+  color: rgba(0, 0, 0, 0.87) !important;
+  background-color: rgba(75, 134, 118, 0.75) !important;
+}

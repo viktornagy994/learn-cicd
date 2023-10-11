@@ -1,0 +1,23 @@
+.feher {
+  color: white;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.admin-flight-form_main_div {
+  height: 911px;
+  background-image: url("/assets/admin_background_3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.07rem;
+  color: snow;
+  font-family: 'Raleway', sans-serif;
+
+}

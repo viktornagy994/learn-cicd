@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email</title>
+</head>
+<body>
+<div style="font-family: 'Raleway', sans-serif">Dear <b th:text="${name}"></b>,</div>
+<br>
+<div style="font-family: 'Raleway', sans-serif"> We have successfully received your registration and your personal profile has been created.
+    To confirm your intent to register on our website, please click on the button below:
+
+</div>
+<br>
+<div>
+    </p>
+    <a th:href="${confirmationLink}"><button style="background-color: darkcyan;color: white; padding: 10px;
+                font-weight: bold; font-size: x-large; cursor: pointer;">Verify account</button></a>
+    <p>
+</div>
+<br>
+<div style="font-family: 'Raleway', sans-serif">
+    To access your account and services offered on kingfishair.progmasters.hu, you will need to
+    sign in directly with your email address or with your chosen social account (Facebook, Google)
+    after confirming your registration.
+</div>
+<br>
+<div style="font-family: 'Raleway', sans-serif">
+    For further details or to change your communication preferences,
+    please visit <strong><u>kingfishair.progmasters.hu</u></strong> and open your profile details.
+</div>
+<br>
+<div style="font-family: 'Raleway', sans-serif">
+    By registering on the website, you agree to the
+    <a href="https://kingfishair.progmasters.hu/assets/GCC.pdf" target="_blank">
+    General Conditions of Carriage</a>
+    of our airline.
+    If your registration was made in error or should you care to opt out of the programme,
+    please get in contact with us by replying to this email or send a direct message
+    to kingfishairservice@gmail.com.
+</div>
+<br>
+<div style="font-family: 'Raleway', sans-serif">
+    Thank you for choosing KingfishAir. We look forward to taking you further!
+</div>
+<br>
+<div style="font-family: 'Raleway', sans-serif">
+    Sincerely,
+    <br>
+    <div style="font-family: 'Playfair Display', serif; color: darkcyan">
+        <i><strong>The KingfishAir Team</strong></i>
+    </div>
+    <br>
+    <br>
+</div>
+<div>
+    <small>
+    49 Hlíðarvegur, Reykjavík | Zip code: 113 | The Republic of Iceland | kingfishairservice@gmail.com | +354 422 7496
+    </small>
+</div>
+<br>
+<div>
+    <small>
+    KINGFISHAIR is firmly committed to respecting your privacy. We don't share your information
+    with any third party without your consent. For more information, please read Kingfishair
+        <a href="https://kingfishair.progmasters.hu/assets/KingfishAir%20Privacy%20Policy.pdf" target="_blank">
+            Privacy Policy.
+        </a>
+    </small>
+</div>
+<br>
+<div>
+    <small>
+    KingfishAir Service Centre, 1185 Ivry-sur-Seine Cedex, Hungary. Société Kingfishair,
+    a public limited company with a capital of EUR 126,748,775, whose head office is at
+    Keflavík Intl., Reykjavík - Bobigny Trade Register Nr. 420 495 178.
+    </small>
+</div>
+</body>
+</html>

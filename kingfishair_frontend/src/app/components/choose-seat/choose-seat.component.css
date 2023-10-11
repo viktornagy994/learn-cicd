@@ -1,0 +1,114 @@
+
+.airplane-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: #E2E1E6;
+  overflow: hidden;
+
+}
+
+.midlle-section-right {
+  width: 0;
+  height: 0;
+  border-right: 35vw solid transparent;
+  border-bottom: 20vw solid #CCC7D7;
+  margin-top: 0%;
+
+}
+
+.plane-body {
+  background: #F9F2FE;
+  height: 100%;
+  border-right: 18px solid #CCC7D7;
+  border-left: 18px solid #CCC7D7;
+  display: flex;
+  justify-content: space-around;
+}
+
+.plane-data{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.midlle-section-left {
+  width: 0;
+  height: 0;
+  border-left: 35vw solid transparent;
+  border-bottom: 20vw solid #CCC7D7;
+  margin-top: 0%;
+
+
+}
+
+/*.seat-container {*/
+/*  font-size: large;*/
+/*  display: flex;*/
+/*width: 100%;*/
+/*}*/
+
+
+
+
+
+.upper {
+  height: 100px;
+  background: #E2E1E6;
+}
+
+.downer {
+  height: 100px;
+  background: #CCC7D7;
+}
+
+.left-side, .right-side {
+  width: 15%;
+}
+
+
+.plane-body-container {
+  min-width: 50%;
+}
+
+.plane-seat-container{
+
+}
+
+.seat-icon{
+
+padding: 0;
+  width: 50%;
+  height: 100px;
+  line-height: 100px;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+font-size: 6vw;
+
+}
+
+.seat-icon:hover{
+  color:darkcyan!important;
+}
+.submit-button button{
+
+
+  font-size: 16px;
+  border: darkslategray;
+  border-radius: 0.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(75, 134, 118, 0.75);
+
+}
+
+.submit-button{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+  background:#E2E1E6 ;
+}
+

@@ -1,0 +1,38 @@
+.admin-route-list_main_div {
+  height: 911px;
+  background-image: url("/assets/admin_background_4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.07rem;
+  color: snow;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.font-color-yellow {
+  background-color: rgb(85,85,204);
+}
+
+.airport-header {
+  color: white;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.airport-filter {
+  width: 100px;
+  height: 30px;
+  font-size: medium;
+  margin-top: 10px;
+}
+

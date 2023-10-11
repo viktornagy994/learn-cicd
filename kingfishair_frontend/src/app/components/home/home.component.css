@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-home {
+  background-image: url("/assets/plain-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: 100%
+}
+
+.card-home {
+  background-color: rgba(240, 255, 240, 0.00);
+  color: #a1eed8;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+  padding-top: 13.5rem;
+  margin-top: 0;
+  display: block;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 3.8rem;
+  letter-spacing: 0.4rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.07rem;
+}
+
+.first-button {
+  padding: 0.7rem;
+  margin-bottom: 5rem;
+  margin-left: 0;
+  font-size: 1rem;
+  border: darkslategray;
+  border-radius: 0.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(75, 134, 118, 0.75);
+}
+.call-to-action-text{
+  font-family: 'Playfair Display', serif;
+  padding-top: 2rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 3.8rem;
+  letter-spacing: 0.2rem;
+  color: snow;
+  text-align: center;
+}
+
+.sup {
+  font-size: 0.9rem;
+}
+
+.commercial-text {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin-top: 14rem;
+  color: darkcyan;
+  font-size: 4rem;
+  font-weight: 900;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  line-height: 3.9rem;
+  letter-spacing: 0.07rem;
+}
+
+.help {
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
+  border: 0;
+  padding-top: 7rem;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.copyright {
+  padding-top: 2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 0.7rem;
+  color: darkcyan;
+  background-color: white;
+  border: none;
+  justify-content: center;
+  text-align: center;
+}
+.scrollTop {
+  top: 80%;
+  right: 2rem;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  opacity: 50%;
+  cursor: pointer;
+  color: darkcyan;
+  float: right;
+  margin-right: 2rem;
+}
+.scrollTop:hover {
+  opacity: 100%;
+}
+
+@media screen and (max-width: 1066px) {
+  h1 {
+    font-size: math;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    text-align: center;
+  }
+  h3 {
+    font-size: math;
+    margin-bottom: 0px;
+    line-height: normal;
+    letter-spacing: normal;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  .custom-home {
+    background-size: auto;
+  }
+
+  .commercial-text {
+    margin-top: auto;
+    padding-right: 1rem;
+    font-size: 35px;
+  }
+  .first-button {
+    margin-left: 0.5rem;
+  }
+  .help {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .call-to-action-text {
+    font-size: 35px;
+  }
+  .scrollTop{
+    margin-right: 1rem;
+    margin-top: -1.5rem;
+  }
+}
+

@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Homepage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.component.css">
+
+</head>
+<section class="custom-home">
+  <h2 class="call-to-action-text"><i>Search & book flights with KingfishAir<sup class="sup">©</sup></i></h2>
+  <div class="choose-departure-arrival-airport-form">
+    <app-choose-departure-arrival-airport-form></app-choose-departure-arrival-airport-form>
+  </div>
+  <div class="card-home">
+    <div>
+      <h1>WONDERS OF <br>
+        ICELAND</h1>
+    </div>
+    <h3>
+      Exploring the Wild:
+      <br>
+      Discover the Land <br>
+      of Fire and Ice
+    </h3>
+    <a>
+      <button class="first-button" (click)="openOurFlights()">
+        Browse our flights...
+      </button>
+    </a>
+  </div>
+  <div>
+    <p class="commercial-text">
+      Discover Our Vision of Travelling <br> Completely Eco-friendly!</p>
+  </div>
+  <div>
+    <app-news-and-deals></app-news-and-deals>
+  </div>
+  <div class="help">
+    Need help? Contact us! <br>
+    We offer 24/7 call centre service via the number below: <br>
+    +354 422 7496
+    <br>
+    Our colleagues are happy to assist you with booking your flight ticket, or get extra information
+    about our services. <br>
+    <br>
+    <strong>Please, keep in mind that you need to contact your local embassy regarding
+    travel documents and regulations or visa-related queries!</strong>
+  </div>
+
+  <div class="copyright">
+    © 2023 KingfishAir Limited.
+  </div>
+  <div class="scrollTop" (click)="scrollToTop()">
+    <i class='fas fa-circle-arrow-up'></i>
+  </div>
+</section>
+</html>

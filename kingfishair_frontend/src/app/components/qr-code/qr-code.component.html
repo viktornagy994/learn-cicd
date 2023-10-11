@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title style="font-size: large; text-align: center; font-weight: normal; margin-bottom: 12px">Welcome at check-in!</mat-card-title>
+  <mat-card-content *ngIf="!checkedinStatus" style="font-size: medium; text-align: center; font-weight: normal; margin-bottom: 12px ">
+    <div>
+    Please with your mobile or tablet device scan the QR code below and open the attached link to check-in.</div>
+    <br>
+    <div> Another check-in option is available at the airport with your ticket!</div>
+  </mat-card-content>
+  <mat-card-content *ngIf="!checkedinStatus" style="font-size: medium; text-align: center; font-weight: normal; margin-bottom: 12px ">
+    <img [src]="QRCode"
+         alt="QR code">
+  </mat-card-content>
+
+  <mat-card-content *ngIf="checkedinStatus" style="font-size: medium; text-align: center; font-weight: normal; margin-bottom: 12px ">
+    <div>Your check-in was successful!</div>
+    <div id="instructions" class="angled-img pull-left">
+      <video muted autoplay  id="video1"  width="350px" height="195px" class="img"
+      >
+        <source src="/assets/mark-checked-in.mp4" type='video/mp4' />
+      </video>
+    </div>
+    <mat-card-actions style="text-align: center">
+      <button style="width: 100%; margin-left: 40px; margin-right: 40px;" (click)="closeDialog()"  mat-raised-button="" color="basic" > OK</button>
+    </mat-card-actions>
+  </mat-card-content>
+
+</mat-card>

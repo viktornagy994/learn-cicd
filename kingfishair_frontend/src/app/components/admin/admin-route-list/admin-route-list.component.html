@@ -1,0 +1,52 @@
+<div class="admin-route-list_main_div" style="padding: 30px;">
+  <br>
+  <br>
+  <h3>Routes
+  </h3>
+  <br>
+  <br>
+
+  <table class="table table-striped">
+
+    <thead>
+    <tr class="table-dark">
+      <th scope="col">
+        <span [ngClass]="{'font-color-yellow': listOrderFilter.order === LIST_ORDER_DEP_AIRPORT}"
+              class="airport-header"
+              (click)="changeListOrder(1)"
+        >
+          Departure airport
+        </span>
+        <br><input id="depFilter" (keyup)="onKeyDepAirportFilter($event)" type="text" class="airport-filter form-control">
+      </th>
+      <th scope="col">
+        <span class="airport-header" (click)="changeListOrder(2)" [ngClass]="{'font-color-yellow': listOrderFilter.order === LIST_ORDER_ARR_AIRPORT}">
+          Arrival airport
+        </span>
+        <br><input id="arrFilter" (keyup)="onKeyArrAirportFilter($event)" type="text" class="airport-filter form-control">
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">Distance<br>(km)</th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">Flight time<br>(min)</th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">Ticket fare<br>(EUR)</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let route of routes, let i = index">
+      <td>{{route.depName}}, {{route.depCity}} ({{route.depIata}})</td>
+      <td>{{route.arrName}}, {{route.arrCity}} ({{route.arrIata}})</td>
+      <td style="horiz-align: right;">{{route.distance}}</td>
+      <td style="horiz-align: right;">{{route.flightTime}}</td>
+      <td style="horiz-align: right;">{{route.ticketFare}}</td>
+    </tr>
+    </tbody>
+
+
+  </table>
+
+  <button (click)="pagePrior()" type="button" class="btn btn-info" title="Pprevious page"> &nbsp; &lt;&lt; &nbsp; </button>
+  &nbsp;&nbsp;
+  <button (click)="pageNext()" type="button" class="btn btn-info" title="Next page"> &nbsp; &gt;&gt; &nbsp; </button>
+
+
+</div>

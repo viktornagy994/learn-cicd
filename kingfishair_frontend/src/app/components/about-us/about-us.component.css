@@ -1,0 +1,147 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.heading {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.heading h1 {
+  font-size: 50px;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  position: relative;
+  color: darkslategrey;
+}
+
+.heading h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin-top: 0.7rem;
+  background-color: darkcyan;
+}
+
+.heading p {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 35px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  flex: 1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.about-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.about-img:hover img {
+  transform: scale(1.2);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.professions {
+  font-size: 45px;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  position: relative;
+  color: darkslategrey;
+  line-height: 3rem;
+}
+
+.container-crew {
+  display: flex;
+  justify-content: center;
+  width: 99vw;
+}
+
+.card {
+  width: 267px;
+  margin: 1rem;
+  border: 0;
+}
+
+.card-last {
+  margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    padding: 0px 20px;
+  }
+  .heading h1 {
+    font-size: 36px;
+  }
+  .heading p {
+    font-size: 17px;
+    margin-bottom: 0px;
+  }
+  .container {
+    padding: 0px;
+  }
+  .about {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .about-img {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .about-content p {
+    padding: 0px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .professions {
+    line-height: 3rem;
+  }
+  .container-crew {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-last {
+    margin: 0;
+  }
+  .second-heading {
+    margin-top: 0;
+    padding: 0;
+  }
+}

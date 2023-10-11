@@ -1,0 +1,123 @@
+<div class="admin-reservation-list_main_div" style="padding: 30px;">
+  <br>
+  <br>
+  <h3>Manage reservations</h3>
+  <br>
+
+
+  <h5>Flight</h5>
+  <table class="table table-striped">
+
+    <thead>
+    <tr class="table-dark">
+      <th scope="col" style=" vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Flight nr.
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Departure airport
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Arrival airport
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Departure time
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Arrival time
+      </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td style="vertical-align: middle;">{{flightNr}}</td>
+      <td style="vertical-align: middle;">{{flightDep}}</td>
+      <td style="vertical-align: middle;">{{flightArr}}</td>
+      <td style="vertical-align: middle;">{{flightSTD}}</td>
+      <td style="vertical-align: middle;">{{flightSTA}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h5>Reservations</h5>
+  <table class="table table-striped" style="width: 100%;">
+
+    <thead>
+    <tr class="table-dark">
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Client
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Email
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Phone
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Address
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Reserved seats
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+      </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let res of reservations, let i = index">
+      <td style="vertical-align: middle;">{{res.userName}}</td>
+      <td style="vertical-align: middle;">{{res.userEmail}}</td>
+      <td style="vertical-align: middle;">{{res.userPhone}}</td>
+      <td style="vertical-align: middle;">{{res.userAddress}}</td>
+      <td style="vertical-align: middle;">{{res.reservations.length}}</td>
+      <td style="vertical-align: middle; text-align: right;">
+        <button type="button" (click)="goToSeats(i)" class="btn btn-info btn-sm" title="Passengers"> Passengers </button>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+
+  <h5>Passengers</h5>
+  <table class="table table-striped" style="width: 100%;">
+
+    <thead>
+    <tr class="table-dark">
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Passenger
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Document ID
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Gender
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        Seat
+      </th>
+      <th scope="col" style="vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+      </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let seat of seats, let i = index">
+      <td style="vertical-align: middle;">{{seat.name}}</td>
+      <td style="vertical-align: middle;">{{seat.identificationNumber}}</td>
+      <td style="vertical-align: middle;">{{seat.gender}}</td>
+      <td style="vertical-align: middle;">{{seat.seatNumber}}</td>
+      <th scope="col"
+          style="text-align: right; vertical-align: top; font-weight: 400; margin-bottom: 5px; padding: 5px;">
+        <button type="button" class="btn btn-info btn-sm" title="Modify"> Modify </button>
+        &nbsp;
+        <button type="button" (click)="deleteSeat(i)" class="btn btn-danger btn-sm" title="Modify"> Delete </button>
+      </th>
+    </tr>
+    </tbody>
+
+
+  </table>
+
+
+</div>

@@ -1,0 +1,45 @@
+.btn-details {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  border: darkslategray !important;
+  border-radius: 0.5rem;
+  color: rgba(0, 0, 0, 0.87) !important;
+  background-color: rgba(75, 134, 118, 0.75) !important;
+}
+
+@media screen and (max-width: 1200px){
+  .mat-mdc-header-cell {
+    padding-inline: 0;
+    text-align: center;
+  }
+
+  .mdc-data-table__cell {
+    padding-inline: 0;
+    text-align: center;
+  }
+
+  .btn-details {
+    margin-right: 0.4rem;
+    font-size: 0.7rem;
+    line-height: normal;
+  }
+
+  .mat-column-stDeparture {
+    padding-right: 0.3rem;
+  }
+
+  .mat-column-stArrival {
+    padding-right: 0.3rem;
+  }
+
+  .mat-column-arrivalAirport {
+    padding-right: 0.3rem;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+
+mat-card {
+  max-width: 1000px;
+  margin: 2em auto;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+mat-form-field {
+  display: flex;
+  width: 400px;
+  text-align: center;
+
+}
+
+.full-width {
+  width: 18rem;
+}
+
+mat-card[_ngcontent-ng-c1164356416] {
+  margin: 0 !important;
+}
+
+

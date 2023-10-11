@@ -1,0 +1,79 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/kingfishairdb?serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: test1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientName: Google
+            authorization-grant-type: authorization_code
+            clientId: 889406620607-ua6krpunsp4q6mlg9l31pehs1fsr9k3d.apps.googleusercontent.com
+            clientSecret: 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
+            redirect-uri: 'http://localhost:8080/api/login/oauth2/code/{registrationId}'
+            scope:
+              - https://www.googleapis.com/auth/userinfo.profile
+              - https://www.googleapis.com/auth/userinfo.email
+              - openid
+              - https://www.googleapis.com/auth/gmail.readonly
+          facebook:
+            clientName: Facebook
+            authorization-grant-type: authorization_code
+            clientId: 2572342779591360
+            clientSecret: 1f705f5368e8fc12aacac9e3a2d7d082
+            redirect-uri: 'http://localhost:8080/api/login/oauth2/code/{registrationId}'
+            scope:
+              - public_profile
+              - email
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kingfishairservice@gmail.com
+    password: yeqnohvdaquqkuwr
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
+
+logging:
+  level:
+    com.progmasters: debug
+    org.springframework.web: info
+    org.hibernate: error
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+cors-policies: http://localhost:4200, http://127.0.0.1:4200
+
+successful-login-redirect-url: http://localhost:4200/
+
+frontend.url: http://localhost:4200
+
+backend.url: http://localhost:8080
+
+google:
+  recaptcha:
+    key: 6LcTQvMnAAAAADJBpJ-QkwPnpUmbh6EbHPnRszII

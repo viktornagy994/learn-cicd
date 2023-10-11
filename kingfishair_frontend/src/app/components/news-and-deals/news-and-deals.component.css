@@ -1,0 +1,17 @@
+.custom {
+  display: grid;
+  margin-top: 6rem;
+
+  justify-content: center;
+  align-content: center;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+}
+
+.carousel-control-next {
+  position: absolute;
+}
+

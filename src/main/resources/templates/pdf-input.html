@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>KingfishAir ticket</title>
+
+</head>
+<body  style="background-color: white">
+<div style="display: flex;text-align: center; justify-content: center; background-color: darkcyan; height: 75px">
+
+    <h1 style="display: flex;  text-align: center; justify-content: center; padding-top: 20px">Boarding Pass</h1>
+
+</div>
+
+
+<div style="background-color: white">
+    <div>
+        <div>
+            <h2>Reservation ID #<span th:text="${reservationId}"></span>
+            </h2>
+        </div>
+        <div>
+            <div th:text="${reservationDate}"></div>
+        </div>
+    </div>
+    <div>
+        <div style="display: flex; justify-content: center;text-align: center">
+            <h2>Flight Details</h2>
+        </div>
+
+        <table>
+            <thead>
+            <tr style="display: flex; justify-content: center;text-align: center">
+                <th style="display: flex; justify-content: center;text-align: center">Departure airport</th>
+
+                <th style="display: flex; justify-content: center;text-align: center; padding-left: 400px">STD</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="display: flex; justify-content: center;text-align: center">
+                <td style="display: flex; justify-content: center;text-align: center" th:text="${departureAirport}"></td>
+                <td style="display: flex; justify-content: center;text-align: center;padding-left: 400px" th:text="${std}"></td>
+
+            </tr>
+            </tbody>
+        </table>
+
+
+        <table>
+            <thead>
+            <tr style="display: flex; justify-content: center;text-align: center">
+                <th style="display: flex; justify-content: center;text-align: center">Arrival airport</th>
+
+                <th style="display: flex; justify-content: center;text-align: center; padding-left: 418px">STA</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="display: flex; justify-content: center;text-align: center">
+                <td style="display: flex; justify-content: center;text-align: center" th:text="${arrivalAirport}"></td>
+                <td style="display: flex; justify-content: center;text-align: center;padding-left: 418px" th:text="${sta}"></td>
+
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <table style="padding-top: 30px">
+        <thead>
+        <tr style="display: flex; justify-content: center;text-align: center;">
+            <th style="display: flex; justify-content: center;text-align: center">Passenger Name</th>
+
+            <th style="display: flex; justify-content: center;text-align: center; padding-left: 18px">Identification Number</th>
+
+            <th style="display: flex; justify-content: center;text-align: center;padding-left: 18px">Passenger Gender</th>
+
+            <th style="display: flex; justify-content: center;text-align: center;padding-left: 18px">Choosen Extras</th>
+
+            <th style="display: flex; justify-content: center;text-align: center;padding-left: 18px">Seat Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="display: flex; justify-content: center;text-align: center">
+            <td style="display: flex; justify-content: center;text-align: center" th:text="${passengerName}"></td>
+            <td style="display: flex; justify-content: center;text-align: center;padding-left: 18px" th:text="${passengerIdentificationNumber}"></td>
+            <td style="display: flex; justify-content: center;text-align: center;padding-left: 18px" th:text="${passengerGender}"></td>
+            <td style="display: flex; justify-content: center;text-align: center;padding-left: 18px" th:text="${choosenExtras}"></td>
+            <td style="display: flex; justify-content: center;text-align: center;padding-left: 18px" th:text="${seatNumber}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div style="display: flex;justify-content: center;text-align: center; padding-top: 20px" >
+        <h3 >QR code for check-in</h3>
+    </div>
+    <div style="display: flex;justify-content: center;text-align: center;">
+        <a style="display: flex;justify-content: center;text-align: center;">
+            <img style="display: flex;justify-content: center;text-align: center;"  data-th-src="${QRcode}"
+                 alt="QR"  />
+        </a>
+    </div>
+
+
+
+    <div style="color: darkcyan;font-size: medium; background-color: white;display: flex; justify-content: center;text-align: center; padding-top: 115px">
+        <a   style="color: darkcyan;font-size: medium; background-color: white;display: flex; justify-content: center;text-align: center;">
+            <img style="display: flex;justify-content: center" src="https://kingfishair.progmasters.hu/assets/logo.jpg"
+                 alt="Logo" width="130px" height="130px" />
+        </a>
+    </div>
+    <div style="color: darkcyan;font-size: medium; background-color: white;display: flex; justify-content: center;text-align: center;">
+        <a   style="color: darkcyan;font-size: large; background-color: white;display: flex; justify-content: center;text-align: center;">
+            KingfishAir Ltd.
+        </a>
+    </div>
+    <div style="color: darkcyan;font-size: small; background-color: white;display: flex; justify-content: center;text-align: center;">
+        <a   style="color: darkcyan;font-size: small; background-color: white;display: flex; justify-content: center;text-align: center;">
+            49 Hlíðarvegur, Reykjavík | Zip code: 113 | The Republic of Iceland | kingfishairservice@gmail.com | +354 422 7496
+        </a>
+    </div>
+
+</div>
+</body>
+</html>

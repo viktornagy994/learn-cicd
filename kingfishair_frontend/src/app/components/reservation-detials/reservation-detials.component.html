@@ -1,0 +1,22 @@
+<div class="card">
+  <p class="title">Reservation details</p>
+  <div class="card-body">
+    <p class="card-text">Customer name: <strong>{{reservation.customerName}}</strong></p>
+    <p class="card-text">Flight number: {{reservation.flightNumber}}</p>
+    <p class="card-text">Number of seats reserved: {{reservation.numberOfSeats}}</p>
+    <p class="card-text">Total fare: {{reservation.totalFare + '€'}}</p>
+    <p *ngIf="!ispaid" class="card-text">Payment status: <span>&#10060;</span></p>
+    <p *ngIf="ispaid" class="card-text">Payment status: <span>&#10003;</span></p>
+    <p *ngIf="!ispaid" class="card-text" style="color: red; font-size: x-small">Please note that we can hold your booking without payment for 10 minutes from the moment of making the reservation! <br>
+    You can pay now or later in your profile at pending flights.</p>
+
+    <ngx-paypal *ngIf="!ispaid" [config]="payPalConfig"></ngx-paypal>
+    <div *ngIf="ispaid">
+      <button class="finish-transaction" mat-raised-button (click)="goToMyProfile()">Go to profile</button>
+    </div>
+
+  </div>
+  <span class="accept"> By paying for the reservation, you accept our
+    <a href="assets/GCC.pdf" target="_blank">General Conditions of Carriage.</a>
+  </span>
+</div>

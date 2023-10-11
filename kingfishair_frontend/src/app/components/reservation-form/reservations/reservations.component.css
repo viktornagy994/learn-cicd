@@ -1,0 +1,51 @@
+.reservation-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 100px;
+}
+.reservation-form mat-form-field {
+  height: 50%;
+}
+h4{
+  color: snow;
+  font-family: 'Raleway', sans-serif;
+}
+.extraAddons-section {
+  display: flex;
+  flex-direction: column;
+}
+.extraAddons-section div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+hr{
+  border: 5px solid rgba(75, 134, 118, 0.75);
+
+  padding: 0;
+  margin-right: 6.28rem;
+}
+.delete-button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.delete-button i{
+  font-size: 35px;
+  color: rgb(205,92,92);
+}
+
+@media screen and (max-width: 1200px) {
+  .reservation-form {
+    flex-direction: column;
+  }
+
+  hr {
+    border-color: rgba(75, 134, 118, 0.80);
+    border-radius: 0.2rem;
+    opacity: 70;
+  }
+}
+

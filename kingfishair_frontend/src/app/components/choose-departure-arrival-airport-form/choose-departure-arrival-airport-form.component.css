@@ -1,0 +1,77 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chooseAirport {
+  width: 50%;
+  float: left;
+}
+.table_message_container{
+  text-align: center !important;
+/*  justify-content: center;*/
+  margin: 0 auto;
+}
+.table_message{
+  text-align: center !important;
+}
+p{
+  color:snow;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-align: center !important;
+}
+
+.check-flights-button {
+  margin: 1rem;
+  height: 4.35rem;
+  display: flex;
+  border-radius: 4px;
+}
+
+.departure {
+  width: 30%;
+  margin-left: 5rem;
+}
+
+.arrival {
+  width: 30%;
+}
+.datepicker{
+  height: 5.65rem;
+  width: calc(15% - 2rem);
+  margin-right: 1rem;
+}
+
+.needs-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+
+@media screen and (max-width: 1000px) {
+  .departure {
+    width: 50%;
+    margin: 0;
+  }
+  .arrival {
+    width: 50%;
+    margin: 0;
+  }
+  .check-flights-button {
+    margin-left: 0.5rem;
+  }
+  .mat-column-planeName {
+    display: none;
+  }
+  .mdc-data-table__cell, .mdc-data-table__header-cell {
+    padding-inline: 0.8rem;
+  }
+}
+
+
+

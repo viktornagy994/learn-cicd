@@ -1,0 +1,86 @@
+<form [formGroup]="loginForm"
+      class="form-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+
+
+        <mat-form-field >
+          <mat-label
+          >Enter your email
+          </mat-label>
+          <input
+            formControlName="username" matInput placeholder="Email"/>
+        </mat-form-field>
+
+
+        <mat-form-field >
+          <mat-label>Enter your password</mat-label>
+          <input formControlName="password" matInput [type]="hide ? 'password' : 'text'"/>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+
+        </mat-form-field>
+
+
+      <div tabindex="0" (keydown.enter)="goToForgottenPassword()" (click)="goToForgottenPassword()"
+                        style="font-size: x-small; cursor: pointer; float: right;color: red">Forgot your password?
+      </div>
+
+
+
+
+
+    </mat-card-content>
+
+    <re-captcha   (resolved)="checkCaptchaIsTrue($event)" formControlName="recaptcha"
+                  siteKey="{{recaptchaKey}}"></re-captcha>
+    <small *ngIf="recaptchaResponse && recaptchaError" class="text-danger">
+      {{recaptchaError}}
+    </small>
+
+    <mat-card-content class="content">
+    <div class="buttons">
+      <mat-card-actions>
+        <button (click)="onSubmit()" [disabled]="loginForm.invalid || !recaptchaResolved" mat-raised-button=""
+                color="primary">Login
+        </button>
+      </mat-card-actions>
+    </div>
+    <div class="buttons">
+      <mat-card-actions>
+
+        <button (click)="loginWithOAuth2('facebook')" mat-raised-button="" color="basic" style="width : 17em;"><img
+          src="/assets/fb-logo.png" alt="facebook" width="7%">&nbsp;&nbsp; Login with Facebook
+        </button>
+
+
+      </mat-card-actions>
+
+    </div>
+    <div class="buttons">
+      <mat-card-actions>
+
+        <button (click)="loginWithOAuth2('google')" mat-raised-button="" color="basic" style="width : 17em;"><img
+          src="/assets/google-logo.png" alt="google" width="10%"> &nbsp;&nbsp;Login with Google
+        </button>
+
+      </mat-card-actions>
+    </div>
+
+
+    <mat-card-content tabindex="0"  style="font-size: small; cursor: pointer; text-align: left; font-weight: normal; color: darkcyan "
+                      (keydown.enter)="goToRegister()"     (click)="goToRegister()">
+      Don't have an account? Register now!
+    </mat-card-content>
+    </mat-card-content>
+  </mat-card>
+
+
+</form>
+
+

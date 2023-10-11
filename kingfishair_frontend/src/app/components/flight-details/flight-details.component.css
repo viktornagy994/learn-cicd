@@ -1,0 +1,21 @@
+.card {
+  width: 18rem;
+  border-width: 0;
+}
+
+.card-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: rgba(75, 134, 118, 0.7);
+}
+
+.card-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: rgba(75, 134, 118, 0.7);
+}
+
+.card-img-top {
+  width: 18rem;
+  height: 11rem;
+}

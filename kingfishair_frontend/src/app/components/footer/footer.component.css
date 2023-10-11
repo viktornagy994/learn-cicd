@@ -1,0 +1,12 @@
+.custom-text {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.7rem;
+}
+
+.contact {
+  justify-content: right;
+  font-size: 0.7rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
